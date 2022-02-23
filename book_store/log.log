@@ -1,0 +1,230 @@
+Not Found: /
+"GET / HTTP/1.1" 404 2273
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2324
+Not Found: /
+"GET / HTTP/1.1" 404 2273
+Not Found: /
+"GET / HTTP/1.1" 404 2273
+Not Found: /user/registration
+"GET /user/registration HTTP/1.1" 404 2601
+Internal Server Error: /user/register/
+Traceback (most recent call last):
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    response = response.render()
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\renderers.py", line 725, in render
+    ret = template.render(context, request=renderer_context['request'])
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 176, in render
+    return self._render(context)
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 168, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 977, in render
+    return SafeString(''.join([
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 978, in <listcomp>
+    node.render_annotated(context) for node in self
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 938, in render_annotated
+    return self.render(context)
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader_tags.py", line 153, in render
+    return compiled_parent._render(context)
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 168, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 977, in render
+    return SafeString(''.join([
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 978, in <listcomp>
+    node.render_annotated(context) for node in self
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 938, in render_annotated
+    return self.render(context)
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 977, in render
+    return SafeString(''.join([
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 978, in <listcomp>
+    node.render_annotated(context) for node in self
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 938, in render_annotated
+    return self.render(context)
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 977, in render
+    return SafeString(''.join([
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 978, in <listcomp>
+    node.render_annotated(context) for node in self
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 938, in render_annotated
+    return self.render(context)
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 977, in render
+    return SafeString(''.join([
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 978, in <listcomp>
+    node.render_annotated(context) for node in self
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 938, in render_annotated
+    return self.render(context)
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\defaulttags.py", line 298, in render
+    return nodelist.render(context)
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 977, in render
+    return SafeString(''.join([
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 978, in <listcomp>
+    node.render_annotated(context) for node in self
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 938, in render_annotated
+    return self.render(context)
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\library.py", line 193, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\templatetags\rest_framework.py", line 96, in optional_login
+    login_url = reverse('rest_framework:login')
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\base.py", line 54, in reverse
+    app_list = resolver.app_dict[ns]
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\resolvers.py", line 562, in app_dict
+    self._populate()
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\resolvers.py", line 526, in _populate
+    {**defaults, **url_pattern.default_kwargs},
+TypeError: 'str' object is not a mapping
+"GET /user/register/ HTTP/1.1" 500 336365
+Internal Server Error: /user/register/
+Traceback (most recent call last):
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    response = response.render()
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\renderers.py", line 725, in render
+    ret = template.render(context, request=renderer_context['request'])
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 176, in render
+    return self._render(context)
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 168, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 977, in render
+    return SafeString(''.join([
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 978, in <listcomp>
+    node.render_annotated(context) for node in self
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 938, in render_annotated
+    return self.render(context)
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader_tags.py", line 153, in render
+    return compiled_parent._render(context)
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 168, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 977, in render
+    return SafeString(''.join([
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 978, in <listcomp>
+    node.render_annotated(context) for node in self
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 938, in render_annotated
+    return self.render(context)
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 977, in render
+    return SafeString(''.join([
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 978, in <listcomp>
+    node.render_annotated(context) for node in self
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 938, in render_annotated
+    return self.render(context)
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 977, in render
+    return SafeString(''.join([
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 978, in <listcomp>
+    node.render_annotated(context) for node in self
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 938, in render_annotated
+    return self.render(context)
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 977, in render
+    return SafeString(''.join([
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 978, in <listcomp>
+    node.render_annotated(context) for node in self
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 938, in render_annotated
+    return self.render(context)
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\defaulttags.py", line 298, in render
+    return nodelist.render(context)
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 977, in render
+    return SafeString(''.join([
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 978, in <listcomp>
+    node.render_annotated(context) for node in self
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 938, in render_annotated
+    return self.render(context)
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\library.py", line 193, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\templatetags\rest_framework.py", line 96, in optional_login
+    login_url = reverse('rest_framework:login')
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\base.py", line 54, in reverse
+    app_list = resolver.app_dict[ns]
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\resolvers.py", line 562, in app_dict
+    self._populate()
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\resolvers.py", line 526, in _populate
+    {**defaults, **url_pattern.default_kwargs},
+TypeError: 'str' object is not a mapping
+"GET /user/register/ HTTP/1.1" 500 336144
+Internal Server Error: /book/add/
+Traceback (most recent call last):
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 167, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 290, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\resolvers.py", line 594, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\resolvers.py", line 594, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\resolvers.py", line 396, in resolve
+    kwargs.update(self.default_args)
+ValueError: dictionary update sequence element #0 has length 1; 2 is required
+"POST /book/add/ HTTP/1.1" 500 76317
+Internal Server Error: /book/add/
+Traceback (most recent call last):
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 167, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 290, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\resolvers.py", line 594, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\resolvers.py", line 594, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\resolvers.py", line 396, in resolve
+    kwargs.update(self.default_args)
+ValueError: dictionary update sequence element #0 has length 1; 2 is required
+"POST /book/add/ HTTP/1.1" 500 76317
+Internal Server Error: /book/add/
+Traceback (most recent call last):
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 167, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 290, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\resolvers.py", line 594, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\resolvers.py", line 594, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\resolvers.py", line 396, in resolve
+    kwargs.update(self.default_args)
+ValueError: dictionary update sequence element #0 has length 1; 2 is required
+"POST /book/add/ HTTP/1.1" 500 76317
+Internal Server Error: /book/add/
+Traceback (most recent call last):
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 167, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 290, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\resolvers.py", line 594, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\resolvers.py", line 594, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "C:\Users\vishwanath\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\resolvers.py", line 396, in resolve
+    kwargs.update(self.default_args)
+ValueError: dictionary update sequence element #0 has length 1; 2 is required
+"POST /book/add/ HTTP/1.1" 500 76317
