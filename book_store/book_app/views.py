@@ -6,6 +6,7 @@ from django.http import JsonResponse
 import logging
 import json
 from user_app.models import UserModel
+from utility.jwt import JwtCode, VerifyToken
 # Create your views here.
 
 
@@ -24,12 +25,16 @@ class AddBook(APIView):
             book = BookSerializer(data=request.data)
             book.is_valid()
 
-            if UserModel.objects.filter(username=request.data['username']).exists() and BookModel.objects.filter(book_name=request.data['book_name']).exists():
-                return JsonResponse({'success': False, 'message': 'Book_name already exists'})
+            decoded_data = VerifyToken().verify_token(request)
+            if UserModel.objects.filter(username=decoded_data):
+                if BookModel.objects.filter(book_name=request.data['book_name']).exists():
+                    return JsonResponse({'success': False, 'message': 'Book_name already exists'})
 
-            book.save()
-            return JsonResponse({'success': True, 'message': 'Book created successfully',
-                                 'data': book.data})
+                book.save()
+                return JsonResponse({'success': True, 'message': 'Book created successfully',
+                                     'data': book.data})
+            else:
+                return JsonResponse({'success': False, 'message': 'Invalid authorization'})
         except Exception as e:
             self.logger.exception(msg=e)
             return JsonResponse({'success': False, 'message': 'Duplicate or Invalid Details provided'})
@@ -42,9 +47,13 @@ class AddBook(APIView):
         """
 
         try:
-            all_books = BookModel.objects.all()
-            book_dict = BookSerializer(all_books, many=True)
-            return JsonResponse({'success': True, 'message': 'Fetched all', 'data': book_dict.data})
+            decoded_data = VerifyToken().verify_token(request)
+            if UserModel.objects.filter(username=decoded_data):
+                all_books = BookModel.objects.all()
+                book_dict = BookSerializer(all_books, many=True)
+                return JsonResponse({'success': True, 'message': 'Fetched all', 'data': book_dict.data})
+            else:
+                return JsonResponse({'success': False, 'message': 'User doesnt exist'})
         except Exception as e:
             self.logger.exception(msg=e)
             return JsonResponse({'success': 'False', 'message': 'Error'})
@@ -57,8 +66,8 @@ class AddBook(APIView):
         """
 
         try:
-
-            if UserModel.objects.filter(username=request.data['username']).exists():
+            decoded_data = VerifyToken().verify_token(request)
+            if UserModel.objects.filter(username=decoded_data):
                 book_object = BookModel.objects.get(book_name=request.data['book_name'])
                 if book_object:
                     book = BookSerializer(book_object, data=request.data)
@@ -82,7 +91,8 @@ class AddBook(APIView):
         """
 
         try:
-            if UserModel.objects.filter(username=request.data['username']).exists():
+            decoded_data = VerifyToken().verify_token(request)
+            if UserModel.objects.filter(username=decoded_data):
                 if BookModel.objects.get(book_name=request.data['book_name']).delete():
                     return JsonResponse({'success': True, 'message': 'Deleted successfully'})
                 else:

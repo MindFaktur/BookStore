@@ -4,6 +4,7 @@ from rest_framework.views import APIView
 from django.http import JsonResponse
 import logging
 from django.contrib.auth.models import auth
+from utility.jwt import JwtCode
 # Create your views here.
 
 
@@ -27,7 +28,9 @@ class UserRegister(APIView):
                                                      phone=received_user.data['phone'],
                                                      )
                 created_user = UserSerializer(user)
-                return JsonResponse({'success': True, 'message': 'Registration Successfull', 'data': created_user.data['username']})
+                data = created_user.data['username']
+                token = JwtCode().encoder(data)
+                return JsonResponse({'success': True, 'message': 'Registration Successfull', 'token': token})
             else:
                 self.logger.debug(msg=f"invalid data {received_user.data}")
                 return JsonResponse({'success': False, 'message': 'Data is invalid', 'data': 'Invalid'})
@@ -52,8 +55,10 @@ class UserLogin(APIView):
             does_user_exist = auth.authenticate(username=received_data.initial_data.get('username'),
                                                 password=received_data.initial_data.get('password'))
             if does_user_exist:
+                data = received_data.initial_data.get('username')
+                token = JwtCode().encoder(data)
                 return JsonResponse({'success': True, 'message': 'Successfully logged in',
-                                     'data': received_data.initial_data.get('username')})
+                                     'data': token})
             else:
                 return JsonResponse({'success': False, 'message': 'Invalid credentials'})
         except Exception as e:
