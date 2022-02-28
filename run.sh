@@ -1,3 +1,3 @@
 #!/bin/sh
 
-echo 'runnig run.sh'
+echo 'runnig run'
