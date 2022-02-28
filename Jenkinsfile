@@ -6,12 +6,12 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                sh './run.sh'
             }
         }
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
+                sh './run.sh'
             }
         }
     }
