@@ -77,7 +77,7 @@ class UserLogin(APIView):
             user_dict = UserSerializer(users, many=True)
             username_list = []
             for user in user_dict.data:
-                username_list.append(user['username'])
+                username_list.append(user)
             return JsonResponse({'success': True, 'message': 'Data fetched', 'data': username_list})
         except Exception as e:
             self.logger.exception(msg=e)
